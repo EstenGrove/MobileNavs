@@ -1,0 +1,316 @@
+/*
+
+#047CE5 - primary blue
+#E9251B - accent red
+#6BF178 - seaweed green(accents)
+#7F4CFF - purple/slateblue
+#FF7777 - coral
+
+#023E73 - navy blue
+#F2F2F2 - faded white
+#F29F05 - mod yellow
+#732439 - dark maroon
+#B2003D - violet
+font-family: 'Raleway', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Pacifico', cursive;
+*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #7F4CFF;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-container {
+    background-color: #047CE5;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    /*   background-color: #023E73; */
+    width: 100%;
+    padding: 2rem;
+
+}
+
+.nav-item {
+    /* E9251B #F29F05  */
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    padding: 1rem;
+}
+
+.nav-item:hover {
+    color: coral;
+}
+
+.left-item {
+    margin-top: -.5rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-grow: 1;
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
+    text-decoration: none;
+    color: coral;
+
+}
+
+
+/*  Class to toggle for the menu content */
+
+.toggleMenu {
+    margin-top: .1rem;
+    /* remove on mobile */
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 6rem;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* To make dots reduce width to 2vw */
+
+.toggleMenu span {
+    color: white;
+    width: 10vw;
+    border-top: .2rem solid #6BF178;
+    border-radius: 1%;
+    z-index: 99;
+}
+
+.toggleMenu:hover {
+    cursor: pointer;
+}
+
+.toggleItems {
+    color: #F29F05;
+    cursor: pointer;
+}
+
+.toggleMenu:hover span {
+    cursor: pointer;
+    border-top: .2rem solid coral;
+}
+
+.show {
+    display: flex;
+}
+
+
+/* ------- Media Queries Mobile ------- */
+
+@media screen and (min-width: 31rem) {
+    .toggleMenu,
+    .mobileMenu {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 30rem) {
+    .nav-item {
+        display: none;
+    }
+}
+
+
+/* --- Toggle --- */
+
+.nav {
+    margin-top: 3rem;
+    max-width: 100%;
+    height: 50vh;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    z-index: 99;
+}
+
+.nav a {
+    padding: 1rem;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    color: #6BF178;
+    z-index: 77;
+}
+
+.nav a:hover {
+    cursor: pointer;
+    color: coral;
+}
+
+.showItems {
+    display: flex;
+}
+
+.overlay {
+    display: none;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    background-color: rgb(4, 124, 229, .8);
+    z-index: 40;
+}
+
+.showOverlay {
+    display: block;
+    opacity: 1;
+
+}
+
+/* ------ Section Main ------- */
+
+.section__main {
+    position: relative;
+    background-color: #f1f1f1;
+    margin-bottom: 10rem;
+    max-width: 100%;
+    height: 100vh;
+    clip-path: circle(55.3% at 34% 10%);
+
+}
+
+.section__title {
+    margin-left: 6rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40%);
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+}
+
+.col-1 {
+    height: 60rem;
+    margin-top: 10rem;
+    order: 0;
+
+}
+
+.section__title-main {
+    font-weight: 700;
+    font-size: 3rem;
+    color: #444;
+}
+
+.section__title-sub {
+    font-size: 2vw;
+    font-weight: 100;
+    color: #666;
+}
+
+.col-2 {
+    height: 10rem;
+    margin-top: 30rem;
+
+}
+
+@media (max-width: 85rem) {
+    .section__title-main {
+        font-weight: 700;
+        font-size: 3.5vw;
+    }
+    .section__title-sub {
+        font-size: 2.5vw;
+    }
+
+}
+
+
+@media (max-width: 65rem) {
+    .section__title-main {
+        font-weight: 700;
+        font-size: 4vw;
+    }
+    .section__title-sub {
+        
+    }
+}
+/* -- iPad and Large Tablets -- */
+@media screen (max-width: 77rem) and (max-height: 102rem) {
+    .section__title-sub {
+        font-size: 2.5vw;
+    }
+}
+
+    
+    
+    
+
+@media screen and (max-width: 38rem) {
+    .section__title {
+        grid-template-columns: repeat(auto-fit, 80%);
+    }
+
+    .section__title-main {
+        font-weight: 700;
+        font-size: 6vw;
+    }
+
+    .section__title-sub {
+        font-size: 5vw;
+
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+.main__img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 4rem;
+    max-width: 60%;
+    height: 50vh;
+    background-image: url("icons/undraw_DesignTools.svg");
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+
+}
